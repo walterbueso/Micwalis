@@ -1,0 +1,145 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+<header class="main-header">
+    <div class="container">
+        <h1 class="page-title">About us</h1>
+
+        <ol class="breadcrumb pull-right">
+            <li><a href="/">Home</a></li>
+            
+            <li class="active">About us</li>
+        </ol>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="right-line no-margin-top">Micwalis</h2>
+        </div>
+        <div class="col-md-8 wow fadeInUp">
+            @*<h2 class="right-line">Micwalis</h2>*@
+            @Umbraco.Field("bodyText")
+            @*<hr class="dotted">
+            <blockquote class="blockquote-color-bg-primary">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales sagittis magna. consectetur adipiscing elit sed consequat, leo eget bibendum sodales.</p>
+                <footer>Adrián Guerra Marrero, Artificial Reason CEO</footer>
+            </blockquote>*@
+        </div>
+        <div class="col-md-4 wow fadeInUp">
+            
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h3 class="panel-title">Services</h3></div>
+                <div class="panel-body" style="padding-bottom:0;">
+                    <ul class="list-group about" style="margin-bottom:0;">
+                        <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Carpet Cleaning</li>
+                        <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Hardwood Cleaning</li>
+                        <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Window Washing</li>
+                        <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Office Building</li>
+                        <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> Residential Cleaning</li>
+                    </ul>
+                    <div class="pricing-box-footer"><a href="#" class="btn btn-ar btn-primary">Learn More</a></div>
+                    
+                </div>
+            </div>
+            
+            @*<h2 class="right-line">Our clients</h2>
+            <div class="row">
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/intel.png" alt="" class="img-responsive"></div>
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/microsoft.png" alt="" class="img-responsive"></div>
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/nokia.png" alt="" class="img-responsive"></div>
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/samsung.png" alt="" class="img-responsive"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/anz.png" alt="" class="img-responsive"></div>
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/maxis.png" alt="" class="img-responsive"></div>
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/sony.png" alt="" class="img-responsive"></div>
+                <div class="col-md-6 col-sm-3 col-xs-6"><img src="~/assets/img/demo/hp.png" alt="" class="img-responsive"></div>
+            </div>*@
+        </div>
+    </div> <!-- row -->
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="right-line">Our Team</h2>
+        </div>
+        <div class="col-md-6">
+            <section>
+                <div class="panel panel-default  animated fadeInDown animation-delay-8">
+                    <div class="panel-body">
+                        <h3 class="section-title no-margin-top">Deano Barnes <small class="pull-right">Founder</small><div class="clearfix"></div></h3>
+                        <div class="clearfix"></div>
+                        <img src="~/assets/img/demo/t3.jpg" alt="" class="alignleft imageborder">
+                        <p class="no-margin-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, explicabo, impedit, voluptatibus fugiat saepe mollitia modi ab itaque cumque perferendis aut ducimus voluptas enim. Aspernatur, nobis id molestias! Quas, beatae commodi voluptates qui sed sint eos magni perferendis! Ea, necessitatibus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illum dolor alias provident officiis. Neque at accusamus quis provident delectus commodi voluptates.</p>
+                        <div class="clearfix"></div>
+                        <a href="#" class="social-icon-ar sm twitter animated fadeInDown"><i class="fa fa-twitter"></i></a>
+
+                        <a href="#" class="social-icon-ar sm facebook animated fadeInDown"><i class="fa fa-facebook"></i></a>
+
+                        <a href="#" class="social-icon-ar sm linkedin animated fadeInDown"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section>
+                <div class="panel panel-default  animated fadeInDown animation-delay-11">
+                    <div class="panel-body">
+                        <h3 class="section-title no-margin-top">Michael Grant <small class="pull-right">Founder</small><div class="clearfix"></div></h3>
+                        <div class="clearfix"></div>
+                        <img src="~/assets/img/demo/t6.jpg" alt="" class="alignleft imageborder">
+                        <p class="no-margin-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, explicabo, impedit, voluptatibus fugiat saepe mollitia modi ab itaque cumque perferendis aut ducimus voluptas enim. Aspernatur, nobis id molestias! Quas, beatae commodi voluptates qui sed sint eos magni perferendis! Ea, necessitatibus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illum dolor alias provident officiis. Neque at accusamus quis provident delectus commodi voluptates.</p>
+                        <div class="clearfix"></div>
+                        <a href="#" class="social-icon-ar sm twitter animated fadeInDown"><i class="fa fa-twitter"></i></a>
+                        
+                        <a href="#" class="social-icon-ar sm facebook animated fadeInDown"><i class="fa fa-facebook"></i></a>
+                        
+                        <a href="#" class="social-icon-ar sm linkedin animated fadeInDown"><i class="fa fa-linkedin"></i></a>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section>
+                <div class="panel panel-default  animated fadeInDown animation-delay-14">
+                    <div class="panel-body">
+                        <h3 class="section-title no-margin-top">John Doe <small class="pull-right">Position Name</small><div class="clearfix"></div></h3>
+                        <div class="clearfix"></div>
+                        <img src="~/assets/img/demo/t3.jpg" alt="" class="alignleft imageborder">
+                        <p class="no-margin-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, explicabo, impedit, voluptatibus fugiat saepe mollitia modi ab itaque cumque perferendis aut ducimus voluptas enim. Aspernatur, nobis id molestias! Quas, beatae commodi voluptates qui sed sint eos magni perferendis! Ea, necessitatibus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illum dolor alias provident officiis. Neque at accusamus quis provident delectus commodi voluptates.</p>
+                        <div class="clearfix"></div>
+                        <a href="#" class="social-icon-ar sm twitter animated fadeInDown"><i class="fa fa-twitter"></i></a>
+
+                        <a href="#" class="social-icon-ar sm facebook animated fadeInDown"><i class="fa fa-facebook"></i></a>
+
+                        <a href="#" class="social-icon-ar sm linkedin animated fadeInDown"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section>
+                <div class="panel panel-default  animated fadeInDown animation-delay-17">
+                    <div class="panel-body">
+                        <h3 class="section-title no-margin-top">John Doe <small class="pull-right">Position Name</small><div class="clearfix"></div></h3>
+                        <div class="clearfix"></div>
+                        <img src="~/assets/img/demo/t6.jpg" alt="" class="alignleft imageborder">
+                        <p class="no-margin-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, explicabo, impedit, voluptatibus fugiat saepe mollitia modi ab itaque cumque perferendis aut ducimus voluptas enim. Aspernatur, nobis id molestias! Quas, beatae commodi voluptates qui sed sint eos magni perferendis! Ea, necessitatibus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illum dolor alias provident officiis. Neque at accusamus quis provident delectus commodi voluptates.</p>
+                        <div class="clearfix"></div>
+                        <a href="#" class="social-icon-ar sm twitter animated fadeInDown"><i class="fa fa-twitter"></i></a>
+
+                        <a href="#" class="social-icon-ar sm facebook animated fadeInDown"><i class="fa fa-facebook"></i></a>
+
+                        <a href="#" class="social-icon-ar sm linkedin animated fadeInDown"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div> <!-- container -->

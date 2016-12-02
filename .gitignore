@@ -250,3 +250,21 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/DevMicwalis/App_Browsers
+/DevMicwalis/App_Data
+/DevMicwalis/App_Plugins
+/DevMicwalis/assets
+/DevMicwalis/Config
+/DevMicwalis/Content
+/DevMicwalis/css
+/DevMicwalis/Properties
+/DevMicwalis/Umbraco
+/DevMicwalis/Umbraco_Client
+*.aspx
+*.csproj
+/DevMicwalis/Global.asax
+/DevMicwalis/packages.config
+/DevMicwalis/Web.config
+/DevMicwalis/Web.Debug.config
+/DevMicwalis/Web.Release.config
+/DevMicwalis.Tests

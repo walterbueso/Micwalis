@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevMicwalis", "DevMicwalis\DevMicwalis.csproj", "{38CA81F3-3BFB-4868-A413-5C032B00C1CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevMicwalis.Tests", "DevMicwalis.Tests\DevMicwalis.Tests.csproj", "{B53FC3C4-6053-4F3D-B6C3-6D394A4EB9F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{CF5C3888-807A-467B-9844-0C412AA39C81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{8162E6D5-3FE5-43E7-A24F-56944B1FA6C9}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{E78575AF-24A8-462B-884A-BC39B41DFAA1}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\DevMicwalis.json = PublishScripts\Templates\DevMicwalis.json
+		PublishScripts\Templates\DevMicwalis.param.dev.json = PublishScripts\Templates\DevMicwalis.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38CA81F3-3BFB-4868-A413-5C032B00C1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38CA81F3-3BFB-4868-A413-5C032B00C1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38CA81F3-3BFB-4868-A413-5C032B00C1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38CA81F3-3BFB-4868-A413-5C032B00C1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53FC3C4-6053-4F3D-B6C3-6D394A4EB9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53FC3C4-6053-4F3D-B6C3-6D394A4EB9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53FC3C4-6053-4F3D-B6C3-6D394A4EB9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53FC3C4-6053-4F3D-B6C3-6D394A4EB9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8162E6D5-3FE5-43E7-A24F-56944B1FA6C9} = {CF5C3888-807A-467B-9844-0C412AA39C81}
+		{E78575AF-24A8-462B-884A-BC39B41DFAA1} = {CF5C3888-807A-467B-9844-0C412AA39C81}
+	EndGlobalSection
+EndGlobal

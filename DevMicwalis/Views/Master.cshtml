@@ -1,0 +1,269 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Micwalis Cleaning</title>
+    
+
+    <link rel="shortcut icon" href="~/assets/img/micwalis-fav.png" />
+
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link href="~/assets/css/preload.css" rel="stylesheet">
+
+    <!-- Compiled in vendors.js -->
+    <!--
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/assets/css/animate.min.css" rel="stylesheet">
+    <link href="~/assets/css/slidebars.min.css" rel="stylesheet">
+    <link href="~/assets/css/lightbox.css" rel="stylesheet">
+    <link href="~/assets/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/assets/css/buttons.css" rel="stylesheet">
+    -->
+
+    <link href="~/assets/css/vendors.css" rel="stylesheet">
+    <link href="~/assets/css/syntaxhighlighter/shCore.css" rel="stylesheet">
+    @RenderSection("css", false)
+
+    <!-- RS5.0 Stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="~/assets/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/navigation.css">-->
+
+    <link href="~/assets/css/style-yellow2.css" rel="stylesheet" title="default">
+    <link href="~/assets/css/width-full.css" rel="stylesheet" title="default">
+    @*<link href="css/custom.css" rel="stylesheet" title="default">*@
+    <style>
+        .header-full-title {
+	background-image:none; 
+	padding: 5px 0 5px 0;
+}
+.header-full {
+	background-color:#fff;
+	background-image:none;
+}
+        .about > .list-group-item {
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background-color: initial;
+        }
+        .btn-ar.btn-primary{
+            background:#d9aa50!important;
+        }
+        .content-box.box-primary:hover{
+            background-color:#d9aa50;
+        }
+    </style>
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="~/assets/js/html5shiv.min.js"></script>
+        <script src="~/assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<body>
+
+    <div class="sb-site-container">
+        <div class="boxed">
+
+            <header id="header-full-top" class="hidden-xs header-full">
+                <div class="container">
+                    <div class="header-full-title">
+                        <img src="~/assets/img/micwalis.jpg">
+                    </div>
+                    <nav class="top-nav">
+                        <ul class="top-nav-social hidden-sm">
+                          
+                            <li><a href="#" class="animated fadeIn animation-delay-7 twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="animated fadeIn animation-delay-8 facebook"><i class="fa fa-facebook"></i></a></li>
+                            
+                            <li><a href="#" class="animated fadeIn animation-delay-9 instagram"><i class="fa fa-instagram"></i></a></li>
+                           
+                        </ul>
+
+                       
+
+                        <div class="dropdown animated fadeInDown animation-delay-13">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-search-box animated fadeInUp">
+                                <form role="form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-ar btn-primary" type="button">Go!</button>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                </form>
+                            </div>
+                        </div> <!-- dropdown -->
+                    </nav>
+                </div> <!-- container -->
+            </header> <!-- header-full -->
+            <nav class="navbar navbar-default navbar-header-full navbar-dark yamm navbar-static-top" role="navigation" id="header">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a id="ar-brand" class="navbar-brand hidden-lg hidden-md hidden-sm" href="/">Micwalis <span>Cleaning</span></a>
+                    </div> <!-- navbar-header -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <!-- <div class="pull-right">
+                        <a href="javascript:void(0);" class="sb-icon-navbar sb-toggle-right"><i class="fa fa-bars"></i></a>
+                    </div> -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Home</a></li>
+                            @{ var selection = CurrentPage.Site().Children.Where("Visible");}
+                            @foreach(var item in selection)
+                            {
+                                <li><a href="@item.Url">@item.Name</a></li>
+                            }
+                        </ul>
+                    </div><!-- navbar-collapse -->
+                </div><!-- container -->
+            </nav>
+
+           
+
+            
+        @RenderBody()
+           
+            <aside id="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="footer-widget-title">Sitemap</h3>
+                            <ul class="list-unstyled three_cols">
+                                <li><a href="/">Home</a></li>
+                                @foreach (var item in selection)
+                                {
+                                    <li><a href="@item.Url">@item.Name</a></li>
+                                }
+
+                            </ul>
+                            <h3 class="footer-widget-title">Contact Us</h3>
+                            <p>Micwalis specializes in providing janitorial cleaning services to office buildings and apartment complexes in the greater Tallahassee Area. Contact us today to get a free qoute.</p>
+                            
+                                    <button class="btn btn-block btn-ar btn-primary" type="button">Get a Free Qoute</button>
+                                
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-widget">
+                                <h3 class="footer-widget-title">Recent Post</h3>
+                                <div class="media">
+                                    <a class="pull-left" href="#"><img class="media-object" src="~/assets/img/demo/m2.jpg" width="75" height="75" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Lorem ipsum Duis quis occaecat minim lorem ipsum tempor officia labor</a></h4>
+                                        <small>August 18, 2013</small>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#"><img class="media-object" src="~/assets/img/demo/m11.jpg" width="75" height="75" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Lorem ipsum dolor excepteur sunt in lorem ipsum cillum tempor</a></h4>
+                                        <small>September 14, 2013</small>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#"><img class="media-object" src="~/assets/img/demo/m4.jpg" width="75" height="75" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Lorem ipsum Dolor cupidatat minim adipisicing et fugiat</a></h4>
+                                        <small>October 9, 2013</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-widget">
+                                <h3 class="footer-widget-title">Recent Works</h3>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail"><img src="~/assets/img/demo/wf1.jpg" class="img-responsive" alt="Image"></a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail"><img src="~/assets/img/demo/wf2.jpg" class="img-responsive" alt="Image"></a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail"><img src="~/assets/img/demo/wf3.jpg" class="img-responsive" alt="Image"></a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail"><img src="~/assets/img/demo/wf4.jpg" class="img-responsive" alt="Image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </aside> <!-- footer-widgets -->
+            <footer id="footer">
+                <p>&copy; @DateTime.Today.Year <a href="#">Micwalis Commercial Enterprise</a>, LLC. All rights reserved.</p>
+            </footer>
+
+        </div> <!-- boxed -->
+    </div> <!-- sb-site -->
+
+
+    <div id="back-top">
+        <a href="#header"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Compiled in vendors.js -->
+    <!--
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.cookie.js"></script>
+    <script src="~/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/bootstrap-switch.min.js"></script>
+    <script src="~/assets/js/wow.min.js"></script>
+    <script src="~/assets/js/slidebars.min.js"></script>
+    <script src="~/assets/js/jquery.bxslider.min.js"></script>
+    <script src="~/assets/js/holder.js"></script>
+    <script src="~/assets/js/buttons.js"></script>
+    <script src="~/assets/js/jquery.mixitup.min.js"></script>
+    <script src="~/assets/js/circles.min.js"></script>
+    <script src="~/assets/js/masonry.pkgd.min.js"></script>
+    <script src="~/assets/js/jquery.matchHeight-min.js"></script>
+    -->
+
+    <script src="~/assets/js/vendors.js"></script>
+
+    <!--<script type="text/javascript" src="~/assets/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>-->
+    <!-- Syntaxhighlighter -->
+    <script src="~/assets/js/syntaxhighlighter/shCore.js"></script>
+    <script src="~/assets/js/syntaxhighlighter/shBrushXml.js"></script>
+    <script src="~/assets/js/syntaxhighlighter/shBrushJScript.js"></script>
+
+    <script src="~/assets/js/DropdownHover.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script src="~/assets/js/holder.js"></script>
+    <script src="~/assets/js/home_info.js"></script>
+    <script src="~/Umbraco_Client/Application/JQuery/jquery.validate.min.js"></script>
+    <script src="~/Umbraco_Client/Application/JQuery/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("js", false)
+</body>
+
+</html>
